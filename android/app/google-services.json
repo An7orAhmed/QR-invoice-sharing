@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "794162241306",
+    "project_id": "invoiceapp-saki",
+    "storage_bucket": "invoiceapp-saki.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:794162241306:android:b06d591850002faa3e96a3",
+        "android_client_info": {
+          "package_name": "com.kitsware.invoice_sharing_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "794162241306-dvfvjganiu55uf0uq0epfbl4qp1dqoor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1ImCJ2HDEt_Ohm4DF8bDNx97GZyXEuaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "794162241306-dvfvjganiu55uf0uq0epfbl4qp1dqoor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
