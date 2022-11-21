@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:794162241306:android:b06d591850002faa3e96a3",
+        "mobilesdk_app_id": "1:794162241306:android:edd950ccfbbaf2643e96a3",
         "android_client_info": {
-          "package_name": "com.kitsware.invoice_sharing_app"
+          "package_name": "com.dcc.invoice_sharing_app"
         }
       },
       "oauth_client": [

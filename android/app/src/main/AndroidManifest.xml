@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.invoice_sharing_app">
    <application
-        android:label="Invoice Sharing App"
+        android:label="QR Invoice"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

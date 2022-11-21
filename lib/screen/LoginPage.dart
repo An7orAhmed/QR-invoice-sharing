@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:invoice_sharing_app/screen/UserHome.dart';
 import 'package:invoice_sharing_app/shared/shared_prefs.dart';
 import 'package:toast/toast.dart';
+import 'ShopHome.dart';
 import 'SignUpPage.dart';
 
 class LoginPage extends StatefulWidget {
@@ -58,9 +60,11 @@ class _LoginPageState extends State<LoginPage> {
             sharedPrefs.userType = userType;
 
             if (isShopUser == true)
-              Navigator.pushReplacementNamed(context, '/ShopHome');
+              Navigator.of(context)
+                  .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => ShopHome()), (route) => false);
             else
-              Navigator.pushReplacementNamed(context, '/UserHome');
+              Navigator.of(context)
+                  .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => UserHome()), (route) => false);
           } on FirebaseAuthException catch (e) {
             if (e.code == 'user-not-found') {
               Toast.show('No user found for that email.', duration: Toast.lengthShort, gravity: Toast.bottom);

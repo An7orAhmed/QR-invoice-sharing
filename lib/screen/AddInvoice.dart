@@ -82,7 +82,7 @@ class _AddInvoiceState extends State<AddInvoice> {
         });
   }
 
-  void qtyInputDialog(Product e) {;
+  void qtyInputDialog(Product e) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -104,8 +104,7 @@ class _AddInvoiceState extends State<AddInvoice> {
                             costs.add(e.price);
                             setState(() => items.add(e));
                           } else {
-                            Toast.show('Stock not available!',
-                                duration: Toast.lengthShort, gravity: Toast.bottom);
+                            Toast.show('Stock not available!', duration: Toast.lengthShort, gravity: Toast.bottom);
                           }
                           Navigator.pop(context);
                         } catch (ex) {
@@ -220,8 +219,7 @@ class _AddInvoiceState extends State<AddInvoice> {
                         var data = FirebaseFirestore.instance.collection('invoices');
                         int i = 0;
                         await data.add(invoice.getInvoice()).then((value) {
-                          Toast.show('A new invoice created.',
-                              duration: Toast.lengthLong, gravity: Toast.bottom);
+                          Toast.show('A new invoice created.', duration: Toast.lengthLong, gravity: Toast.bottom);
 
                           items.forEach((element) async {
                             await FirebaseFirestore.instance

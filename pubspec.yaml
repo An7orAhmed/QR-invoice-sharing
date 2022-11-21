@@ -23,14 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  toast:
-  firebase_core:
-  firebase_auth:
-  cloud_firestore:
-  shared_preferences:
-  qr_flutter:
-  barcode_scan2:
-  intl:
+  toast:               # to display short messages
+  firebase_core:       # firebase core for use services
+  firebase_auth:       # to register or login to the app
+  cloud_firestore:     # to store data in firebase
+  shared_preferences:  # to store local data
+  qr_flutter:          # to generate QR code
+  barcode_scan2:       # to scan QR code
+  intl:                # time conversion
 
 
   # The following adds the Cupertino Icons font to your application.

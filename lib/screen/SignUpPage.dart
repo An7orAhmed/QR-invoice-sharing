@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:invoice_sharing_app/screen/ShopHome.dart';
+import 'package:invoice_sharing_app/screen/UserHome.dart';
 import 'package:invoice_sharing_app/shared/shared_prefs.dart';
 import 'package:toast/toast.dart';
 
@@ -65,11 +67,13 @@ class _SignUpPageState extends State<SignUpPage> {
                 'contact': contact.text == "" ? "N/A" : contact.text
               });
               sharedPrefs.userType = "SHOP";
-              Navigator.pushReplacementNamed(context, '/ShopHome');
+              Navigator.of(context)
+                  .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => ShopHome()), (route) => false);
             } else {
               await FirebaseFirestore.instance.collection('users').doc(user.uid).set({'userType': 'USER'});
               sharedPrefs.userType = "USER";
-              Navigator.pushReplacementNamed(context, '/UserHome');
+              Navigator.of(context)
+                  .pushAndRemoveUntil(MaterialPageRoute(builder: (context) => UserHome()), (route) => false);
             }
           } on FirebaseAuthException catch (e) {
             if (e.code == 'weak-password') {
